@@ -2,65 +2,21 @@ const generateAmenities = () => {
     return Math.floor(Math.random() * 5 + 1);
 };
 
-export const rooms = {
-    1: {
-        id: 1,
-        number: 1,
-        bed: generateAmenities(),
-        bath: generateAmenities(),
-        cable: true,
-        internet: true,
-        fullKitchen: true,
-        booked: false,
-    },
-    2: {
-        id: 2,
-        number: 2,
-        bed: generateAmenities(),
-        bath: generateAmenities(),
-        cable: true,
-        internet: true,
-        fullKitchen: true,
-        booked: false,
-    },
-    3: {
-        id: 3,
-        number: 3,
-        bed: generateAmenities(),
-        bath: generateAmenities(),
-        cable: true,
-        internet: true,
-        fullKitchen: true,
-        booked: false,
-    },
-    4: {
-        id: 4,
-        number: 4,
-        bed: generateAmenities(),
-        bath: generateAmenities(),
-        cable: true,
-        internet: true,
-        fullKitchen: true,
-        booked: false,
-    },
-    5: {
-        id: 5,
-        number: 5,
-        bed: generateAmenities(),
-        bath: generateAmenities(),
-        cable: true,
-        internet: true,
-        fullKitchen: true,
-        booked: false,
-    },
-    6: {
-        id: 6,
-        number: 6,
-        bed: generateAmenities(),
-        bath: generateAmenities(),
-        cable: true,
-        internet: true,
-        fullKitchen: true,
-        booked: false,
-    },
+const generateRooms = (amount) => {
+    return Array(amount)
+        .fill({})
+        .map((_, index) => ({
+            index: {
+                id: index,
+                number: index,
+                bed: generateAmenities(),
+                bath: generateAmenities(),
+                cable: true,
+                internet: true,
+                fullKitchen: true,
+                booked: false,
+            },
+        }));
 };
+
+export const rooms = generateRooms(100);
