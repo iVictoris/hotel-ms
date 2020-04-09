@@ -1,21 +1,21 @@
 .room {
     &.icon {
-        padding: 5px;
-        margin-right: 4%;
-        margin-bottom: 15px;
+        padding: 13px 0;
+        margin-right: $room-icons-margin-right;
+        margin-bottom: 10px;
         background: white;
         text-align: center;
         font-size: 1.5rem;
-        width: (100% / 6) - 4%;
+        width: (100% / $room-icons-per-row) - $room-icons-margin-right;
         font-weight: 700;
         cursor: pointer;
 
-        &:nth-child(6n + 1) {
-            margin-left: 2%;
+        &:nth-child(#{$room-icons-per-row}n + 1) {
+            margin-left: $room-icons-margin-halves;
         }
 
-        &:nth-child(6n) {
-            margin-right: 2%;
+        &:nth-child(#{$room-icons-per-row}n) {
+            margin-right: $room-icons-margin-halves;
         }
 
         &.available {
