@@ -1,0 +1,43 @@
+.room {
+    &.icon {
+        padding: 5px;
+        margin-right: 4%;
+        margin-bottom: 15px;
+        background: white;
+        text-align: center;
+        font-size: 1.5rem;
+        width: (100% / 6) - 4%;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:nth-child(6n + 1) {
+            margin-left: 2%;
+        }
+
+        &:nth-child(6n) {
+            margin-right: 2%;
+        }
+
+        &.available {
+            background: $available;
+        }
+
+        &.booked,
+        &.cleaning,
+        &.issue {
+            color: white;
+        }
+
+        &.booked {
+            background: $booked;
+        }
+
+        &.cleaning {
+            background-color: $cleaning;
+        }
+
+        &.issue {
+            background: $issue;
+        }
+    }
+}
