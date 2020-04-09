@@ -5,18 +5,22 @@ const generateAmenities = () => {
 const generateRooms = (amount) => {
     return Array(amount)
         .fill({})
-        .map((_, index) => ({
-            index: {
-                id: index,
-                number: index,
-                bed: generateAmenities(),
-                bath: generateAmenities(),
-                cable: true,
-                internet: true,
-                fullKitchen: true,
-                booked: false,
-            },
-        }));
+        .reduce(
+            (prev, current, index) => ({
+                ...prev,
+                [index + 1]: {
+                    id: index + 1,
+                    number: index + 1,
+                    bed: generateAmenities(),
+                    bath: generateAmenities(),
+                    cable: true,
+                    internet: true,
+                    fullKitchen: true,
+                    status: 'available',
+                },
+            }),
+            {},
+        );
 };
 
 export const rooms = generateRooms(100);
