@@ -1,7 +1,7 @@
 .rooms {
+    @include scrollable-container;
     display: flex;
     flex-flow: wrap;
     width: 90%;
     margin: 0 auto;
-    padding-left: auto;
 }
