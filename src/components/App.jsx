@@ -5,12 +5,21 @@ import { RoomIcon } from './';
 /**
  * * MVP
  * * see available rooms at a glance,
- * ! book rooms,
+ * ! see detailed view of room
+ *      ! should be able:
+ *          ! to book room here
+ *          ! schedule cleaning
+ *          ! block room for any issue
+ * ! book rooms
+ *      ! should:
+ *          ! look up customer by email/phone
+ *          ! proceed without customer sign up
  * ! add rooms,
- * ! get room information,
  * ! checkout guests of room
  * ! hotel auth - login/register
+ *      ! Write tests
  * ! customer auth - login/register
+ *      ! Write tests
  *
  * * Optional Features:
  * ? payment system
