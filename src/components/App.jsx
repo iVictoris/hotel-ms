@@ -1,14 +1,16 @@
 import React from 'react';
 import { rooms } from '../data/rooms';
+import { RoomIcon } from './';
 
 function App() {
     const roomIcons = Object.keys(rooms).map((roomId) => {
         const { number, status } = rooms[roomId];
-        return (
-            <div className={`room icon ${status}`.trim()} key={roomId}>
-                {number}
-            </div>
-        );
+        const roomProps = {
+            number,
+            status,
+            key: roomId,
+        };
+        return <RoomIcon {...roomProps} />;
     });
     return (
         <div className="app">
