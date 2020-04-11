@@ -1,0 +1,9 @@
+{
+  "name": "hotel-api",
+  "version": "0.0.1",
+  "description": "an api for my front end project, a hotel management system",
+  "main": "index.js",
+  "repository": "https://github.com/iVictoris/hotel-ms/server",
+  "author": "ivictoris",
+  "license": "MIT"
+}
