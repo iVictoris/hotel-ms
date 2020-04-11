@@ -1,6 +1,6 @@
 import React from 'react';
-import { rooms } from '../data/rooms';
-import { RoomIcon } from './';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import { Overview, Room } from './';
 
 /**
  * * MVP
@@ -27,18 +27,17 @@ import { RoomIcon } from './';
  */
 
 function App() {
-    const roomIcons = Object.keys(rooms).map((roomId) => {
-        const { number, status } = rooms[roomId];
-        const roomProps = {
-            number,
-            status,
-            key: roomId,
-        };
-        return <RoomIcon {...roomProps} />;
-    });
     return (
         <div className="app">
-            <div className="rooms">{roomIcons}</div>
+            <nav></nav>
+            <main className="view">
+                <Switch>
+                    <Route path="/" exact render={() => <div>home</div>} />
+                    <Route path="/overview" component={Overview} />
+                    <Route path="/room/:id" component={Room} />
+                    <Redirect to="/" />
+                </Switch>
+            </main>
         </div>
     );
 }
