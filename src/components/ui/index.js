@@ -1,3 +1,4 @@
 import RoomIcon from './RoomIcon';
+import Room from './Room';
 
-export { RoomIcon };
+export { RoomIcon, Room };

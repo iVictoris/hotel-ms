@@ -1,4 +1,5 @@
 import App from './App';
-import { RoomIcon } from './ui';
+import { RoomIcon, Room } from './ui';
+import { Overview } from './pages';
 
-export { App, RoomIcon };
+export { App, RoomIcon, Overview, Room };
