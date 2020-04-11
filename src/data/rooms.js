@@ -13,6 +13,10 @@ const generateRooms = (amount) => {
                     number: index + 1,
                     bed: generateAmenities(),
                     bath: generateAmenities(),
+                    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    Nesciunt eligendi assumenda corrupti explicabo vitae error temporibus 
+                    minima ratione totam laudantium. Laboriosam magni ea iusto rerum, totam 
+                    explicabo illum perferendis ut?`,
                     cable: true,
                     internet: true,
                     fullKitchen: true,
