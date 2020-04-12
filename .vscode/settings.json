@@ -1,0 +1,11 @@
+{
+    "editor.formatOnSave": true,
+    "editor.minimap.maxColumn": 80,
+    "editor.quickSuggestionsDelay": 15,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "600",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.tabWidth": 4
+}
