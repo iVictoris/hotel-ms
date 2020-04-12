@@ -1,14 +1,12 @@
-import express from "express";
-const app = express();
-const port = 8080; // default port to listen
+// yarn add dotenv; yarn add -D @types/node tslint typescript;
+import dotenv from "dotenv";
+import server from "./api";
+dotenv.config();
 
-// define a route handler for the default home page
-app.get("/", (req, res) => {
-    res.send("Hello world!");
-});
+const port = process.env.PORT || 8080; // default port to listen
 
 // start the Express server
-app.listen(port, () => {
+server.listen(port, () => {
     // tslint:disable-next-line:no-console
     console.log(`server started at http://localhost:${port}`);
 });
